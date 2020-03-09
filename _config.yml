@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: 雪梨's 博客
+subtitle: 2020 冲冲冲
+description: 前端开发技术宅
+keywords: 学习
+author: Sheri Szeto
+language: zh-CN
 timezone: ''
 
 # URL
@@ -93,11 +93,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/SheriSzeto/sheriszeto.github.io
-  branch: master
+  repo: 
+    github: https://github.com/SheriSzeto/sheriszeto.github.io,master
+    coding: git@e.coding.net:sheri/sheri.git,master
+
