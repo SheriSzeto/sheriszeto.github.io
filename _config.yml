@@ -99,7 +99,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: 
+  repo:
     github: https://github.com/SheriSzeto/sheriszeto.github.io,master
-    coding: git@e.coding.net:sheri/sheri.git,master
+    coding: git@e.coding.net:sheri/sheri/sheri.git,master
 
