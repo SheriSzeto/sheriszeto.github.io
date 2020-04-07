@@ -20,21 +20,23 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="第一次在Mac中配置好了hexo,执行hexo d发布的时候一直提示： 1Error: Permission denied (publickey). fatal: Could not read from remote repository. 这个大部分是因为公钥配置的问题引起的。 在GitHub配置了公钥信息，但是执行sudo hexo deploy就报上面的问题，可以猜测到基本和sudo权限有关">
+  <meta name="description" content="[toc!] Initialization 初始化阶段16.3后废除 &#x3D;&#x3D;定义属性（props）和状态（state）&#x3D;&#x3D; mounting 挂载阶段componentWillMount16.3之后废除 在组件即将被挂载到DOM时执行 （新增）getDerivedStateFromProps(nextProps, prevState)&#x3D;&#x3D;纯函数，根据nextProps和prevState计算出预期的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo部署时提示Fatal： Could not read from remote repository的处理">
-<meta property="og:url" content="http://yoursite.com/2019/03/24/hexo-error/index.html">
+<meta property="og:title" content="React生命周期理解">
+<meta property="og:url" content="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="雪梨&#39;s 博客">
-<meta property="og:description" content="第一次在Mac中配置好了hexo,执行hexo d发布的时候一直提示： 1Error: Permission denied (publickey). fatal: Could not read from remote repository. 这个大部分是因为公钥配置的问题引起的。 在GitHub配置了公钥信息，但是执行sudo hexo deploy就报上面的问题，可以猜测到基本和sudo权限有关">
+<meta property="og:description" content="[toc!] Initialization 初始化阶段16.3后废除 &#x3D;&#x3D;定义属性（props）和状态（state）&#x3D;&#x3D; mounting 挂载阶段componentWillMount16.3之后废除 在组件即将被挂载到DOM时执行 （新增）getDerivedStateFromProps(nextProps, prevState)&#x3D;&#x3D;纯函数，根据nextProps和prevState计算出预期的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-03-24T06:49:02.000Z">
-<meta property="article:modified_time" content="2020-03-30T06:10:31.986Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/images/1586245251958.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/images/1586265512940.png">
+<meta property="article:published_time" content="2020-04-07T05:23:22.000Z">
+<meta property="article:modified_time" content="2020-04-07T05:23:22.000Z">
 <meta property="article:author" content="Sheri Szeto">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="question">
+<meta property="article:tag" content="react 生命周期">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/images/1586245251958.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/03/24/hexo-error/">
+<link rel="canonical" href="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>Hexo部署时提示Fatal： Could not read from remote repository的处理 | 雪梨's 博客</title>
+  <title>React生命周期理解 | 雪梨's 博客</title>
   
 
 
@@ -166,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/hexo-error/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -179,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo部署时提示Fatal： Could not read from remote repository的处理
+          React生命周期理解
         </h1>
 
         <div class="post-meta">
@@ -189,23 +191,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-03-24 14:49:02" itemprop="dateCreated datePublished" datetime="2019-03-24T14:49:02+08:00">2019-03-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-30 14:10:31" itemprop="dateModified" datetime="2020-03-30T14:10:31+08:00">2020-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
+              <time title="创建时间：2020-04-07 13:23:22" itemprop="dateCreated datePublished" datetime="2020-04-07T13:23:22+08:00">2020-04-07</time>
             </span>
 
           
@@ -219,24 +205,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>第一次在Mac中配置好了hexo,执行hexo d发布的时候一直提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Permission denied (publickey). fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure>
-<p>这个大部分是因为公钥配置的问题引起的。</p>
-<p>在GitHub配置了公钥信息，但是执行sudo hexo deploy就报上面的问题，可以猜测到基本和sudo权限有关。</p>
-<p>在执行hexo命令时，如果不加sudo，会报以下错误：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection Error: EACCES: permission denied, open <span class="string">'/Users/sheri/Developer/blog/db.json'</span> at Error (native)</span><br></pre></td></tr></table></figure>
-
-<h3 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h3><p>前面生成公钥的命令是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
-<p>没有加sudo，生成的公钥是当前用户的，路径是/Users/sheri/.ssh。但是sudo hexo d命令执行的时候会去读取root用户的公钥，这时候root用户下的公钥肯定还没生成。</p>
-<h3 id="root用户生成公钥"><a href="#root用户生成公钥" class="headerlink" title="root用户生成公钥"></a>root用户生成公钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
-<p>对应路径为/var/root/.ssh</p>
-<p>重新把公钥信息配置到GitHub中，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cat /var/root/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo d</span><br></pre></td></tr></table></figure>
-<p>推送成功！</p>
-
+        <p>[toc!]</p>
+<h3 id="Initialization-初始化阶段"><a href="#Initialization-初始化阶段" class="headerlink" title="Initialization 初始化阶段"></a><del>Initialization 初始化阶段</del></h3><p>16.3后废除</p>
+<p>==定义属性（props）和状态（state）==</p>
+<h3 id="mounting-挂载阶段"><a href="#mounting-挂载阶段" class="headerlink" title="mounting 挂载阶段"></a>mounting 挂载阶段</h3><h4 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a><del>componentWillMount</del></h4><p>16.3之后废除</p>
+<p>在组件即将被挂载到DOM时执行</p>
+<h4 id="（新增）getDerivedStateFromProps-nextProps-prevState"><a href="#（新增）getDerivedStateFromProps-nextProps-prevState" class="headerlink" title="（新增）getDerivedStateFromProps(nextProps, prevState)"></a>（新增）getDerivedStateFromProps(nextProps, prevState)</h4><p>==纯函数，根据nextProps和prevState计算出预期的状态改变，返回结果会被送给setState==</p>
+<h4 id="render"><a href="#render" class="headerlink" title="render"></a>render</h4><p>==页面state或props发生变化时执行==</p>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h4><p>==组件挂载完成时执行==</p>
+<p>==只在页面刷新时执行一次==</p>
+<p><img src="./images/1586245251958.png" alt="enter description here"></p>
+<h3 id="updation-更新阶段"><a href="#updation-更新阶段" class="headerlink" title="updation 更新阶段"></a>updation 更新阶段</h3><h4 id="componentWillReceiveProps"><a href="#componentWillReceiveProps" class="headerlink" title="componentWillReceiveProps"></a><del>componentWillReceiveProps</del></h4><p>16.3之后废除</p>
+<p>子组件接收到父组件传递来的参数，父组件render函数重新被执行时执行</p>
+<ul>
+<li>子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行</li>
+<li>组件第一次存在于DOM，函数不会被执行，如果已经存在于DOM，函数才会被执行</li>
+</ul>
+<h4 id="（新增）getDerivedStateFromProps-nextProps-prevState-1"><a href="#（新增）getDerivedStateFromProps-nextProps-prevState-1" class="headerlink" title="（新增）getDerivedStateFromProps(nextProps, prevState)"></a>（新增）getDerivedStateFromProps(nextProps, prevState)</h4><h4 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a>shouldComponentUpdate</h4><p>==组件发生改变前执行==</p>
+<h4 id="componentWillUpdate"><a href="#componentWillUpdate" class="headerlink" title="componentWillUpdate"></a><del>componentWillUpdate</del></h4><p>16.3之后废除</p>
+<p>组件即将更新</p>
+<h4 id="render-1"><a href="#render-1" class="headerlink" title="render"></a>render</h4><p>挂载渲染</p>
+<h4 id="（新增）getSnapshotBeforeUpdate-prevProps-prevState"><a href="#（新增）getSnapshotBeforeUpdate-prevProps-prevState" class="headerlink" title="（新增）getSnapshotBeforeUpdate(prevProps, prevState)"></a>（新增）getSnapshotBeforeUpdate(prevProps, prevState)</h4><p>==render之后执行，执行时DOM元素还没被更新，用来获取DOM信息，获得snapshot作为componentDidUpdate的第三个参数传入==</p>
+<h4 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a>componentDidUpdate</h4><p>组件更新完成<br><img src="./images/1586265512940.png" alt="enter description here"></p>
+<h3 id="unmounting-卸载阶段"><a href="#unmounting-卸载阶段" class="headerlink" title="unmounting 卸载阶段"></a>unmounting 卸载阶段</h3><h4 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h4>
     </div>
 
     
@@ -245,8 +236,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/question/" rel="tag"># question</a>
+              <a href="/tags/react-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag"># react 生命周期</a>
           </div>
 
         
@@ -255,13 +245,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/03/02/hexo-start/" rel="prev" title="hexo+github搭建博客">
-      <i class="fa fa-chevron-left"></i> hexo+github搭建博客
+    <a href="/2020/03/24/silu/" rel="prev" title="前端学习思路">
+      <i class="fa fa-chevron-left"></i> 前端学习思路
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/24/silu/" rel="next" title="前端学习思路">
-      前端学习思路 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -321,7 +308,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成公钥"><span class="nav-number">1.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#root用户生成公钥"><span class="nav-number">2.</span> <span class="nav-text">root用户生成公钥</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Initialization-初始化阶段"><span class="nav-number">1.</span> <span class="nav-text">Initialization 初始化阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mounting-挂载阶段"><span class="nav-number">2.</span> <span class="nav-text">mounting 挂载阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#componentWillMount"><span class="nav-number">2.1.</span> <span class="nav-text">componentWillMount</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（新增）getDerivedStateFromProps-nextProps-prevState"><span class="nav-number">2.2.</span> <span class="nav-text">（新增）getDerivedStateFromProps(nextProps, prevState)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#render"><span class="nav-number">2.3.</span> <span class="nav-text">render</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#componentDidMount"><span class="nav-number">2.4.</span> <span class="nav-text">componentDidMount</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#updation-更新阶段"><span class="nav-number">3.</span> <span class="nav-text">updation 更新阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#componentWillReceiveProps"><span class="nav-number">3.1.</span> <span class="nav-text">componentWillReceiveProps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（新增）getDerivedStateFromProps-nextProps-prevState-1"><span class="nav-number">3.2.</span> <span class="nav-text">（新增）getDerivedStateFromProps(nextProps, prevState)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shouldComponentUpdate"><span class="nav-number">3.3.</span> <span class="nav-text">shouldComponentUpdate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#componentWillUpdate"><span class="nav-number">3.4.</span> <span class="nav-text">componentWillUpdate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#render-1"><span class="nav-number">3.5.</span> <span class="nav-text">render</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（新增）getSnapshotBeforeUpdate-prevProps-prevState"><span class="nav-number">3.6.</span> <span class="nav-text">（新增）getSnapshotBeforeUpdate(prevProps, prevState)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#componentDidUpdate"><span class="nav-number">3.7.</span> <span class="nav-text">componentDidUpdate</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unmounting-卸载阶段"><span class="nav-number">4.</span> <span class="nav-text">unmounting 卸载阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#componentWillUnmount"><span class="nav-number">4.1.</span> <span class="nav-text">componentWillUnmount</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

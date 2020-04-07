@@ -163,6 +163,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Sheri Szeto">
+      <meta itemprop="description" content="前端开发技术宅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雪梨's 博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">React生命周期理解</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-07 13:23:22" itemprop="dateCreated datePublished" datetime="2020-04-07T13:23:22+08:00">2020-04-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc!]</p>
+<h3 id="Initialization-初始化阶段"><a href="#Initialization-初始化阶段" class="headerlink" title="Initialization 初始化阶段"></a><del>Initialization 初始化阶段</del></h3><p>16.3后废除</p>
+<p>==定义属性（props）和状态（state）==</p>
+<h3 id="mounting-挂载阶段"><a href="#mounting-挂载阶段" class="headerlink" title="mounting 挂载阶段"></a>mounting 挂载阶段</h3><h4 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a><del>componentWillMount</del></h4><p>16.3之后废除</p>
+<p>在组件即将被挂载到DOM时执行</p>
+<h4 id="（新增）getDerivedStateFromProps-nextProps-prevState"><a href="#（新增）getDerivedStateFromProps-nextProps-prevState" class="headerlink" title="（新增）getDerivedStateFromProps(nextProps, prevState)"></a>（新增）getDerivedStateFromProps(nextProps, prevState)</h4><p>==纯函数，根据nextProps和prevState计算出预期的状态改变，返回结果会被送给setState==</p>
+<h4 id="render"><a href="#render" class="headerlink" title="render"></a>render</h4><p>==页面state或props发生变化时执行==</p>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h4><p>==组件挂载完成时执行==</p>
+<p>==只在页面刷新时执行一次==</p>
+<p><img src="./images/1586245251958.png" alt="enter description here"></p>
+<h3 id="updation-更新阶段"><a href="#updation-更新阶段" class="headerlink" title="updation 更新阶段"></a>updation 更新阶段</h3><h4 id="componentWillReceiveProps"><a href="#componentWillReceiveProps" class="headerlink" title="componentWillReceiveProps"></a><del>componentWillReceiveProps</del></h4><p>16.3之后废除</p>
+<p>子组件接收到父组件传递来的参数，父组件render函数重新被执行时执行</p>
+<ul>
+<li>子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行</li>
+<li>组件第一次存在于DOM，函数不会被执行，如果已经存在于DOM，函数才会被执行</li>
+</ul>
+<h4 id="（新增）getDerivedStateFromProps-nextProps-prevState-1"><a href="#（新增）getDerivedStateFromProps-nextProps-prevState-1" class="headerlink" title="（新增）getDerivedStateFromProps(nextProps, prevState)"></a>（新增）getDerivedStateFromProps(nextProps, prevState)</h4><h4 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a>shouldComponentUpdate</h4><p>==组件发生改变前执行==</p>
+<h4 id="componentWillUpdate"><a href="#componentWillUpdate" class="headerlink" title="componentWillUpdate"></a><del>componentWillUpdate</del></h4><p>16.3之后废除</p>
+<p>组件即将更新</p>
+<h4 id="render-1"><a href="#render-1" class="headerlink" title="render"></a>render</h4><p>挂载渲染</p>
+<h4 id="（新增）getSnapshotBeforeUpdate-prevProps-prevState"><a href="#（新增）getSnapshotBeforeUpdate-prevProps-prevState" class="headerlink" title="（新增）getSnapshotBeforeUpdate(prevProps, prevState)"></a>（新增）getSnapshotBeforeUpdate(prevProps, prevState)</h4><p>==render之后执行，执行时DOM元素还没被更新，用来获取DOM信息，获得snapshot作为componentDidUpdate的第三个参数传入==</p>
+<h4 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a>componentDidUpdate</h4><p>组件更新完成<br><img src="./images/1586265512940.png" alt="enter description here"></p>
+<h3 id="unmounting-卸载阶段"><a href="#unmounting-卸载阶段" class="headerlink" title="unmounting 卸载阶段"></a>unmounting 卸载阶段</h3><h4 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/24/silu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -492,7 +571,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -505,7 +584,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
