@@ -226,10 +226,10 @@
 <p>在执行hexo命令时，如果不加sudo，会报以下错误：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection Error: EACCES: permission denied, open <span class="string">'/Users/sheri/Developer/blog/db.json'</span> at Error (native)</span><br></pre></td></tr></table></figure>
 
-<h3 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h3><p>前面生成公钥的命令是：</p>
+<h3><span id="生成公钥">生成公钥</span></h3><p>前面生成公钥的命令是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
 <p>没有加sudo，生成的公钥是当前用户的，路径是/Users/sheri/.ssh。但是sudo hexo d命令执行的时候会去读取root用户的公钥，这时候root用户下的公钥肯定还没生成。</p>
-<h3 id="root用户生成公钥"><a href="#root用户生成公钥" class="headerlink" title="root用户生成公钥"></a>root用户生成公钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
+<h3><span id="root用户生成公钥">root用户生成公钥</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
 <p>对应路径为/var/root/.ssh</p>
 <p>重新把公钥信息配置到GitHub中，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cat /var/root/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
@@ -321,7 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成公钥"><span class="nav-number">1.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#root用户生成公钥"><span class="nav-number">2.</span> <span class="nav-text">root用户生成公钥</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">root用户生成公钥</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
