@@ -1,756 +1,165 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="前端开发技术宅">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雪梨&#39;s 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="雪梨&#39;s 博客">
-<meta property="og:description" content="前端开发技术宅">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Sheri Szeto">
-<meta property="article:tag" content="学习">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://yoursite.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false
-  };
-</script>
-
-  <title>雪梨's 博客</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">雪梨's 博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">2020 冲冲冲</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-  </ul>
-
-</nav>
-</div>
-    </header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        CC的部落格
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+<meta name="generator" content="Hexo 4.2.0"></head>
 
-          <div class="content">
+<body id="bodyx">
+    <div class="hd logodiv">
+    <img src="/img/logo.png" class="logopng">
+    <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> CC 雪梨 <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
+</div>
+<div class="hd">
+    <ol class="breadcrumb">
+        
+            <li><a class="ba" href="/project">作品</a></li>
+        
+            <li><a class="ba" href="/domain">域名</a></li>
+        
+            <li><a class="ba" href="/links">友联</a></li>
+        
+            <li><a class="ba" href="/about">关于</a></li>
+        
+            <li><a class="ba" href="https://github.com/sheriszeto" target="_blank" rel="noopener">Github</a></li>
+        
+    </ol>
+    <hr class="breadcrumbhr">
+</div>
+<div class="hd">
+    
+    
+        
+        
+            <div class="titlex">
+                <p><span class="jing">#</span>
+                    2020
+                </p>
+            </div>
             
-
-  <div class="posts-expand">
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Sheri Szeto">
-      <meta itemprop="description" content="前端开发技术宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雪梨's 博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">React生命周期理解</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-07 13:23:22" itemprop="dateCreated datePublished" datetime="2020-04-07T13:23:22+08:00">2020-04-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-12 17:13:49" itemprop="dateModified" datetime="2020-05-12T17:13:49+08:00">2020-05-12</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <a id="more"></a>
-
-<!-- toc -->
-
-<ul>
-<li><a href="#组件initialization-初始化阶段">组件Initialization 初始化阶段</a></li>
-<li><a href="#组件mounting-挂载阶段">组件Mounting 挂载阶段</a><ul>
-<li><a href="#~~componentwillmount~~17正式删除"><del>componentWillMount</del>（17正式删除）</a></li>
-<li><a href="#render">render</a></li>
-<li><a href="#componentdidmount">componentDidMount</a></li>
-</ul>
-</li>
-<li><a href="#组件updation-更新阶段">组件Updation 更新阶段</a><ul>
-<li><a href="#~~componentwillreceiveprops~~17正式删除"><del>componentWillReceiveProps</del>(17正式删除)</a></li>
-<li><a href="#font-colorred新增getderivedstatefrompropsnextprops-prevstatefont"><font color="red">（新增）getDerivedStateFromProps(nextProps, prevState)</font></a></li>
-<li><a href="#shouldcomponentupdatenextprops-nextstate">shouldComponentUpdate(nextProps, nextState)</a></li>
-<li><a href="#~~componentwillupdate~~17正式删除"><del>componentWillUpdate</del>(17正式删除)</a></li>
-<li><a href="#render-1">render</a></li>
-<li><a href="#font-colorred新增getsnapshotbeforeupdateprevprops-prevstatefont"><font color="red">（新增）getSnapshotBeforeUpdate(prevProps, prevState)</font></a></li>
-<li><a href="#componentdidupdate">componentDidUpdate</a></li>
-</ul>
-</li>
-<li><a href="#组件unmounting-卸载阶段">组件unmounting 卸载阶段</a><ul>
-<li><a href="#componentwillunmount">componentWillUnmount</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-<h3><span id="组件initialization-初始化阶段">组件Initialization 初始化阶段</span></h3><ul>
-<li><p>类的构造方法（constructor()），继承了react Component基类，也继承react基类，才能有render()，生命周期</p>
-<blockquote>
-<p>注意：函数式组件没有生命周期，也没有state</p>
-</blockquote>
-</li>
-<li><p>super(props)将父组件的props传递给子组件，让子组件读取</p>
-</li>
-<li><p>constructor() 初始化组件的状态，如定义this.state的内容</p>
-</li>
-</ul>
-<h3><span id="组件mounting-挂载阶段">组件Mounting 挂载阶段</span></h3><h4><span id="componentwillmount17正式删除"><del>componentWillMount</del>（17正式删除）</span></h4><ul>
-<li>在组件挂载到DOM前调用，且只调用一次，调用this.setState不会引起组件的重新渲染</li>
-</ul>
-<h4><span id="render">render</span></h4><ul>
-<li><p>根据组件的state和props,return一个react元素，由React自身根据此元素去渲染出页面DOM。</p>
-</li>
-<li><p>是纯函数，不能在里面执行this.setState</p>
-</li>
-<li><p>若state和props发生变化，会重新调用render</p>
-</li>
-</ul>
-<h4><span id="componentdidmount">componentDidMount</span></h4><ul>
-<li>组件挂载到DOM后调用，且只调用一次</li>
-</ul>
-<h3><span id="组件updation-更新阶段">组件Updation 更新阶段</span></h3><p>setState引起的state更新或父组件重新render引起的props更新，更新后的state和props都将引起子组件的重新render。</p>
-<p>造成组件更新有以下情况：</p>
-<ul>
-<li>父组件重新render<blockquote>
-<p>父组件的重新render导致重传的props，子组件将直接跟着重新渲染，无论props是否有变化，可通过shouldComponentUpdate方法优化</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  shouldComponentUpdate(nextProps) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nextProps.someThings === <span class="keyword">this</span>.props.someThings) &#123; <span class="comment">// 当重新渲染前后值没发生改变，则子组件不要重新渲染</span></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;&#123;<span class="keyword">this</span>.props.someThings&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>在componentWillReceiveProps,将props换成state</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      someThings: props.someThings</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillReceiveProps(nextProps) &#123;<span class="comment">// 父组件重传props就会调用这个方法, props会判断是否发生变化，变化才会重新setState</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;<span class="attr">someThings</span>: nextProps.someThings&#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;&#123;<span class="keyword">this</span>.props.someThings&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></li>
-<li>组件本身调用setState，无论state有没有变化，也可通过shouldComponentUpdate方法优化<blockquote>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      someThings: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  shouldComponentUpdate(nextState) &#123;<span class="comment">// 当state真的发生变化才重新渲染</span></span><br><span class="line">    <span class="keyword">if</span> (nextStatee.someThings === <span class="keyword">this</span>.state.someThings) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> preSomeThings = <span class="keyword">this</span>.state.someThings;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      someThings: preSomeThings</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;&#123;<span class="keyword">this</span>.state.someThing&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4><span id="componentwillreceiveprops17正式删除"><del>componentWillReceiveProps</del>(17正式删除)</span></h4><p>子组件接收到父组件传递来的参数，父组件render函数重新被执行时执行</p>
-<ul>
-<li>子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行</li>
-<li>组件第一次存在于DOM，函数不会被执行，如果已经存在于DOM，函数才会被执行</li>
-</ul>
-<h4><span id="新增getderivedstatefrompropsnextprops-prevstate"><font color="red">（新增）getDerivedStateFromProps(nextProps, prevState)</font></span></h4><ul>
-<li><p>在组件创建时和更新时的render方法之前调用，它应该返回一个对象来更新状态，或者返回null来不更新任何内容。</p>
-</li>
-<li><p>在声明之前要加static关键字，无法访问class的this</p>
-</li>
-</ul>
-<h4><span id="shouldcomponentupdatenextprops-nextstate">shouldComponentUpdate(nextProps, nextState)</span></h4><p>通过对比props和state是否真的发生变化，返回true则当前组件将继续执行更新过程，返回false则当前组件停止更新</p>
-<h4><span id="componentwillupdate17正式删除"><del>componentWillUpdate</del>(17正式删除)</span></h4><p>组件即将更新</p>
-<h4><span id="render">render</span></h4><p>挂载渲染</p>
-<h4><span id="新增getsnapshotbeforeupdateprevprops-prevstate"><font color="red">（新增）getSnapshotBeforeUpdate(prevProps, prevState)</font></span></h4><p>render之后执行，执行时DOM元素还没被更新，用来获取DOM信息，获得snapshot作为componentDidUpdate的第三个参数传入，此声明周期返回的任何值都被作为参数传递给componentDidUpdate()</p>
-<h4><span id="componentdidupdate">componentDidUpdate</span></h4><p>组件更新完成</p>
-<h3><span id="组件unmounting-卸载阶段">组件unmounting 卸载阶段</span></h3><h4><span id="componentwillunmount">componentWillUnmount</span></h4>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/24/silu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Sheri Szeto">
-      <meta itemprop="description" content="前端开发技术宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雪梨's 博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/24/silu/" class="post-title-link" itemprop="url">前端学习思路</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-24 14:49:02" itemprop="dateCreated datePublished" datetime="2020-03-24T14:49:02+08:00">2020-03-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-30 15:16:28" itemprop="dateModified" datetime="2020-03-30T15:16:28+08:00">2020-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%80%9D%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">思路</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://blog-1257457106.cos.ap-chengdu.myqcloud.com/mind.png" alt=""></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/24/silu/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+        <a class="flink" href="/2020/04/07/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%90%86%E8%A7%A3/">
+            <div class="list">
+                <div class="postname">
+                    React生命周期理解
+                </div>
+                <div class="posttime">
+                    四月 7日
+                </div>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/hexo-error/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Sheri Szeto">
-      <meta itemprop="description" content="前端开发技术宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雪梨's 博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/24/hexo-error/" class="post-title-link" itemprop="url">Hexo部署时提示Fatal： Could not read from remote repository的处理</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-03-24 14:49:02" itemprop="dateCreated datePublished" datetime="2019-03-24T14:49:02+08:00">2019-03-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-30 14:10:31" itemprop="dateModified" datetime="2020-03-30T14:10:31+08:00">2020-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>第一次在Mac中配置好了hexo,执行hexo d发布的时候一直提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Permission denied (publickey). fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure>
-<p>这个大部分是因为公钥配置的问题引起的。</p>
-<p>在GitHub配置了公钥信息，但是执行sudo hexo deploy就报上面的问题，可以猜测到基本和sudo权限有关。</p>
-<p>在执行hexo命令时，如果不加sudo，会报以下错误：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection Error: EACCES: permission denied, open <span class="string">'/Users/sheri/Developer/blog/db.json'</span> at Error (native)</span><br></pre></td></tr></table></figure>
-
-<h3><span id="生成公钥">生成公钥</span></h3><p>前面生成公钥的命令是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
-<p>没有加sudo，生成的公钥是当前用户的，路径是/Users/sheri/.ssh。但是sudo hexo d命令执行的时候会去读取root用户的公钥，这时候root用户下的公钥肯定还没生成。</p>
-<h3><span id="root用户生成公钥">root用户生成公钥</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -t rsa -C “xxx@github.com”</span><br></pre></td></tr></table></figure>
-<p>对应路径为/var/root/.ssh</p>
-<p>重新把公钥信息配置到GitHub中，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cat /var/root/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo d</span><br></pre></td></tr></table></figure>
-<p>推送成功！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/02/hexo-start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Sheri Szeto">
-      <meta itemprop="description" content="前端开发技术宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雪梨's 博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/02/hexo-start/" class="post-title-link" itemprop="url">hexo+github搭建博客</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-03-02 11:47:57" itemprop="dateCreated datePublished" datetime="2019-03-02T11:47:57+08:00">2019-03-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-30 15:14:28" itemprop="dateModified" datetime="2020-03-30T15:14:28+08:00">2020-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-搭建GitHub博客"><a href="#1-搭建GitHub博客" class="headerlink" title="1. 搭建GitHub博客"></a>1. 搭建GitHub博客</h3><h4 id="1-1-创建仓库"><a href="#1-1-创建仓库" class="headerlink" title="1.1 创建仓库"></a>1.1 创建仓库</h4><p>新建一个名为<code>你的用户名.github.io</code>的仓库，比如说，如果你的github用户名是test，那么你就新建<code>test.github.io</code>的仓库，博客访问地址为<a href="http://test.github.io。" target="_blank" rel="noopener">http://test.github.io。</a></p>
-<h4 id="1-2-绑定域名"><a href="#1-2-绑定域名" class="headerlink" title="1.2 绑定域名"></a>1.2 绑定域名</h4><p>如果没有自己的域名也可不绑定，想要个性化域名先去注册一个。在域名控制台配置你的GitHub地址；</p>
-<p>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下<code>你的用户名.github.io</code>的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向<code>你的用户名.github.io</code>，这样可以保证无论是否添加www都可以访问，如下：<br><img src="https://blog-1257457106.cos.ap-chengdu.myqcloud.com/hexo-start-1.png" alt=""></p>
-<h3 id="2-配置SSH-key"><a href="#2-配置SSH-key" class="headerlink" title="2. 配置SSH key"></a>2. 配置SSH key</h3><p>直接使用用户名和密码可以上传代码，但是不安全，下面示范用ssh的方式提交，先配置本地和服务器连接：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br></pre></td></tr></table></figure>
-<p>如果提示：No such file or directory 说明你是第一次使用git。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
-<p>然后连续3次回车，最终会生成一个文件在用户目录下,</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ls</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br><img src="https://blog-1257457106.cos.ap-chengdu.myqcloud.com/hexo-start-2.png" alt=""></p>
-<h4 id="2-1-测试是否成功"><a href="#2-1-测试是否成功" class="headerlink" title="2.1 测试是否成功"></a>2.1 测试是否成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com <span class="comment"># 注意邮箱地址不用改</span></span><br></pre></td></tr></table></figure>
-<p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/03/02/hexo-start/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Sheri Szeto"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Sheri Szeto</p>
-  <div class="site-description" itemprop="description">前端开发技术宅</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/SheriSzeto" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SheriSzeto" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/13580370252@163.com" title="E-Mail → 13580370252@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
+    
         
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Sheri Szeto</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.2
-  </div>
-
         
+        <a class="flink" href="/2020/03/24/silu/">
+            <div class="list">
+                <div class="postname">
+                    前端学习思路
+                </div>
+                <div class="posttime">
+                    三月 24日
+                </div>
+            </div>
+        </a>
+    
+        
+        
+            <div class="titlex">
+                <p><span class="jing">#</span>
+                    2019
+                </p>
+            </div>
+            
+        
+        <a class="flink" href="/2019/03/24/hexo-error/">
+            <div class="list">
+                <div class="postname">
+                    Hexo部署时提示Fatal： Could not read from remote repository的处理
+                </div>
+                <div class="posttime">
+                    三月 24日
+                </div>
+            </div>
+        </a>
+    
+        
+        
+        <a class="flink" href="/2019/03/02/hexo-start/">
+            <div class="list">
+                <div class="postname">
+                    hexo+github搭建博客
+                </div>
+                <div class="posttime">
+                    三月 2日
+                </div>
+            </div>
+        </a>
+    
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>-<a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek" target="_blank" rel="noopener">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
+
+<script src="/libs/jquery.min.js"></script>
 
 
+<script src="/libs/highlight/highlight.pack.js"></script>
 
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
 
+<script src="/js/js.js"></script>
 
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
 
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
 
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
 
-      </div>
-    </footer>
-  </div>
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+.v a {
+    color: #8696b1;
+}
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
 </body>
+
 </html>
