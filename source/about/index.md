@@ -5,6 +5,13 @@ layout: about
 comments: false
 sidebar: custom
 ---
-我叫司徒欣，女孩👧纸，大家喜欢叫我CC(欣欣)
-slogan: No Pain,No Gain
-热爱编程💻，热爱分享📚，热爱生活🌈
+
+#### ⛱ 关于我
+  - 🔆 大名：司徒欣，👧 ，一个不折不扣的吃货🍧，由于复姓的原因，小伙伴们都喜欢叫我欣欣，于是...小名：CC 也来了~~
+  - 💻 软件工程专业，成为一个FE已有五载💼
+  - 🔔 slogan: No Pain, No Gain
+
+#### 🎯 未来要做的
+  - [ ] Flutter的入门与掌握
+  - [ ] React Native的深入学习
+  - [ ] Uni-app完成TODO小程序

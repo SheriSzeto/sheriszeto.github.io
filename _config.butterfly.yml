@@ -81,7 +81,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/favicon.ico
 
 # Avatar (頭像)
 avatar:
@@ -803,7 +803,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/lazyload
 lazyload:
-  enable: false
+  enable: true
   post: /img/loading.gif
 
 # PWA
