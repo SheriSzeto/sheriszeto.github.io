@@ -3,9 +3,10 @@ title: hexo+github搭建博客
 date: 2019-02-30 11:47:57
 tags:
     - hexo
-    - question
 categories: Hexo
-toc: true    
+toc: true 
+top_img: false 
+cover: https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/blog/hexo-start.jpg
 ---
 
 ### 1. 搭建GitHub博客

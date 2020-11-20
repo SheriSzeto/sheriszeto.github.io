@@ -1,10 +1,13 @@
 ---
 title: Hexo部署时提示Fatal： Could not read from remote repository的处理
 date: 2019-03-24 14:49:02
-tag:
+tags:
     - hexo
     - question
 categories: Hexo    
+top_img: false 
+cover: https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/blog/hexo-error.jpeg
+
 ---
 第一次在Mac中配置好了hexo,执行hexo d发布的时候一直提示：
 ```bash
