@@ -6,9 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo clean && hexo g && sudo hexo deploy",
-    "server": "hexo server",
-    "sync": "yuque-hexo sync",
-    "clean:yuque": "yuque-hexo clean"
+    "server": "hexo server"
   },
   "hexo": {
     "version": "5.0.0"

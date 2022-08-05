@@ -6,9 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo clean && hexo g && sudo hexo deploy",
-    "server": "hexo server",
-    "sync": "yuque-hexo sync",
-    "clean:yuque": "yuque-hexo clean"
+    "server": "hexo server"
   },
   "hexo": {
     "version": "5.0.0"
@@ -36,9 +34,9 @@
     "adapter": "hexo",
     "concurrency": 5,
     "baseUrl": "https://www.yuque.com/api/v2",
-    "login": "sheriszeto",
+    "login": "leader755",
     "repo": "blog",
-    "token": "Koz795i9zHaoY3oDynX5Kvy9Bwv2PpULZ5Vlz0bc",
+    "token": "在语雀上申请的 token",
     "onlyPublished": false,
     "onlyPublic": false
   }
