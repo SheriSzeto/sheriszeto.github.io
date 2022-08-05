@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端自动化测试 | CC的部落格</title><meta name="keywords" content="学习"><meta name="author" content="SheriSzeto"><meta name="copyright" content="SheriSzeto"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="jest 前端测试框架 环境搭建  123mkdir JestTestcd JestTestnpm install jest --save-dev   测试文件  以.test 文件来命名，如新建一个 sum.js，要测试这个文件需建一个 sum.test.js 文件作为入口。jest 提供的两个方法：  test 方法：Jest 封装的测试方法，一般填写两个参数，描述和测试方法  expect">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端自动化测试">
+<meta property="og:url" content="https://sheriszeto.github.io/2021/04/22/yuque/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="CC的部落格">
+<meta property="og:description" content="jest 前端测试框架 环境搭建  123mkdir JestTestcd JestTestnpm install jest --save-dev   测试文件  以.test 文件来命名，如新建一个 sum.js，要测试这个文件需建一个 sum.test.js 文件作为入口。jest 提供的两个方法：  test 方法：Jest 封装的测试方法，一般填写两个参数，描述和测试方法  expect">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-04-22T03:22:30.000Z">
+<meta property="article:modified_time" content="2022-08-05T07:13:16.513Z">
+<meta property="article:author" content="SheriSzeto">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://sheriszeto.github.io/2021/04/22/yuque/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SheriSzeto","link":"链接: ","source":"来源: CC的部落格","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-05 15:13:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2215283_t3ao8pxbrz.css"><meta name="generator" content="Hexo 5.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CC的部落格</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">前端自动化测试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-22T03:22:30.000Z" title="发表于 2021-04-22 11:22:30">2021-04-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-05T07:13:16.513Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2><span id="jest-前端测试框架">jest 前端测试框架</span></h2><ol>
+<li>环境搭建</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir JestTest</span><br><span class="line">cd JestTest</span><br><span class="line">npm install jest --save-dev</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>测试文件</li>
+</ol>
+<p>以.test 文件来命名，如新建一个 sum.js，要测试这个文件需建一个 sum.test.js 文件作为入口。<br>jest 提供的两个方法：</p>
+<ul>
+<li><p>test 方法：Jest 封装的测试方法，一般填写两个参数，描述和测试方法</p>
+</li>
+<li><p>expect 方法 ：预期方法，就是你调用了什么方法，传递了什么参数，得到的预期是什么。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// sum.js</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  sum,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// sum.test.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; sum &#125; = <span class="built_in">require</span>(<span class="string">&quot;./sum.js&quot;</span>);</span><br><span class="line">test(<span class="string">&quot;计算总和&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  expect(sum(<span class="number">2</span>, <span class="number">3</span>)).toBe(<span class="number">5</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>初始化配置和生成测试覆盖率文件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx jest --init</span><br></pre></td></tr></table></figure>
+
+<p>生成一个说明文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx jest --coverage</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>匹配器<blockquote>
+<p>toBe()匹配器</p>
+</blockquote>
+</li>
+</ol>
+<p><code>toBe()</code>匹配器，是在工作中最常用的一种匹配器，简单的理解它就是相等。这个相当是等同于<code>===</code>的，也就是我们常说的严格相等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;测试严格相等&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = &#123; <span class="attr">number</span>: <span class="string">&quot;007&quot;</span> &#125;;</span><br><span class="line">  expect(a).toBe(&#123; <span class="attr">number</span>: <span class="string">&quot;007&quot;</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toEqual()匹配器</p>
+</blockquote>
+<p>相当于==</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;测试严格相等&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = &#123; <span class="attr">number</span>: <span class="string">&quot;007&quot;</span> &#125;;</span><br><span class="line">  expect(a).toEqual(&#123; <span class="attr">number</span>: <span class="string">&quot;007&quot;</span> &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeNul()匹配器</p>
+</blockquote>
+<p><code>toBeNull()</code>匹配器只匹配<code>null</code>值，需要注意的是不匹配<code>undefined</code>的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeNull测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="literal">null</span>;</span><br><span class="line">  expect(a).toBeNull();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeUndefined()匹配器</p>
+</blockquote>
+<p>toBeUndefined()匹配 undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeUndefined测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="literal">undefined</span>;</span><br><span class="line">  expect(a).toBeUndefined();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeDefined()匹配器</p>
+</blockquote>
+<p>toBeDefined()定义过了就匹配，这里注意的是 null 值可以通过测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeDefined测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="string">&quot;sheri&quot;</span>;</span><br><span class="line">  expect(a).toBeDefined();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeTruthy()匹配器</p>
+</blockquote>
+<p>返回 true 才能测试通过</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeTruthy 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">0</span>;</span><br><span class="line">  expect(a).toBeTruthy();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 不通过</span></span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;toBeTruthy 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="string">&quot;sheri&quot;</span>;</span><br><span class="line">  expect(a).toBeTruthy();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 通过</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeFalsy()匹配器</p>
+</blockquote>
+<p>返回 false 就测试通过</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeFalsy 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">0</span>;</span><br><span class="line">  expect(a).toBeFalsy();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeGreaterThan()匹配器</p>
+</blockquote>
+<p>这个是用来作数字比较的，大于什么数值，只要大于传入的数值，就可以通过测试。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeGreaterThan匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="number">10</span>;</span><br><span class="line">  expect(count).toBeGreaterThan(<span class="number">9</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeLessThan()匹配器</p>
+</blockquote>
+<p><code>toBeLessThan</code>跟<code>toBeGreaterThan</code>相对应的，就是少于一个数字时，就可以通过测试。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeLessThan匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="number">10</span>;</span><br><span class="line">  expect(count).toBeLessThan(<span class="number">11</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeGreaterThanOrEqual()匹配器</p>
+</blockquote>
+<p>当测试结果数据大于等于期待数字时，可以通过测试。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toBeGreaterThan匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="number">10</span>;</span><br><span class="line">  expect(count).toBeGreaterThan(<span class="number">10</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;toBeGreaterThanOrEqual匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="number">10</span>;</span><br><span class="line">  expect(count).toBeGreaterThanOrEqual(<span class="number">10</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 通过</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toBeLessThanOrEqual()匹配器</p>
+</blockquote>
+<p>与上相反</p>
+<blockquote>
+<p>toBeCloseTo()匹配器</p>
+</blockquote>
+<p>这个是可以自动消除<code>JavaScript</code>浮点精度错误的匹配器，举个例子，比如我们让<code>0.1</code>和<code>0.2</code>相加，这时候<code>js</code>得到的值应该是<code>0.30000000000004</code>,所以如果用<code>toEqual()</code>匹配器，测试用例会通过不了测试的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toEqual匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> one = <span class="number">0.1</span>;</span><br><span class="line">  <span class="keyword">const</span> two = <span class="number">0.2</span>;</span><br><span class="line">  expect(one + two).toEqual(<span class="number">0.3</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;toBeCloseTo匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> one = <span class="number">0.1</span>;</span><br><span class="line">  <span class="keyword">const</span> two = <span class="number">0.2</span>;</span><br><span class="line">  expect(one + two).toBeCloseTo(<span class="number">0.3</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 通过</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toMatch()匹配器</p>
+</blockquote>
+<p>字符串包含匹配器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toMatch匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">&quot;谢大脚、刘英、小红&quot;</span>;</span><br><span class="line">  expect(str).toMatch(<span class="string">&quot;谢大脚&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正则也可以</span></span><br><span class="line">test(<span class="string">&quot;toMatch匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">&quot;谢大脚、刘英、小红&quot;</span>;</span><br><span class="line">  expect(str).toMatch(<span class="regexp">/谢大脚/</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toContain()匹配器</p>
+</blockquote>
+<p>字符串包含关系，和上面的区别，这个是数组的匹配器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;toContain匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> arr = [<span class="string">&quot;谢大脚&quot;</span>, <span class="string">&quot;刘英&quot;</span>, <span class="string">&quot;小红&quot;</span>];</span><br><span class="line">  expect(arr).toContain(<span class="string">&quot;谢大脚&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// set也可以兼容</span></span><br><span class="line">test(<span class="string">&quot;toContain匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> arr = [<span class="string">&quot;谢大脚&quot;</span>, <span class="string">&quot;刘英&quot;</span>, <span class="string">&quot;小红&quot;</span>];</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line">  expect(data).toContain(<span class="string">&quot;谢大脚&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>toThrow()匹配器</p>
+</blockquote>
+<p>专门对异常进行处理的匹配器，可以检测一个方法会不会抛出异常。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> throwNewErrorFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;this is a new error&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;toThrow匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  expect(throwNewErrorFunc).toThrow();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 也可加一些字符串匹配，但是字符串必须对应</span></span><br><span class="line">test(<span class="string">&quot;toThrow匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  expect(throwNewErrorFunc).toThrow(<span class="string">&quot;this is a new error&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>not()匹配器</p>
+</blockquote>
+<p><code>not</code>匹配器是<code>Jest</code>中比较特殊的匹配器，意思就是<code>相反</code>或者说<code>取反。</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> throwNewErrorFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;this is a new error&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;toThrow匹配器&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  expect(throwNewErrorFunc).not.toThrow();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 不能通过</span></span><br></pre></td></tr></table></figure>
+
+<p>还有很多匹配器，可以找官方文档<a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect">https://jestjs.io/docs/en/expect</a></p>
+<ol start="5">
+<li>异步代码测试方法<blockquote>
+<p>回调函数式</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// fetchData.js</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> fetchData = <span class="function">(<span class="params">fn</span>) =&gt;</span> &#123;</span><br><span class="line">  axios.get(<span class="string">&quot;http://a.jspang.com/jestTest.json&quot;</span>).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    fn(response.data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// fetchData.test.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; fetchData &#125; <span class="keyword">from</span> <span class="string">&quot;./fetchData.js&quot;</span>;</span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;fetchData 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    expect(data).toEqual(&#123;</span><br><span class="line">      success: <span class="literal">true</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">    done();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>返回 promise</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> fetchTwoData = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> axios.get(<span class="string">&quot;http://a.jspang.com/jestTest.json&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">import</span> &#123; fetchData, fetchTwoData &#125; <span class="keyword">from</span> <span class="string">&quot;./fetchData.js&quot;</span>;</span><br><span class="line">test(<span class="string">&quot;FetchTwoData 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> fetchTwoData().then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    expect(response.data).toEqual(&#123;</span><br><span class="line">      success: <span class="literal">true</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>走 catch 错误方法，只有出现异常的时候才会走这个方法，而现在没有出现异常，就不会走这个测试方法，所以走正常的测试用例会通过测试，这时候需要执行一次断言</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;FetchThreeData 测试&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  expect.assertions(<span class="number">1</span>); <span class="comment">// 断言，必须执行一次expect</span></span><br><span class="line">  <span class="keyword">return</span> fetchThreeData().catch(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    expect(e.toString().indexOf(<span class="string">&quot;404&quot;</span>) &gt; -<span class="number">1</span>).toBe(<span class="literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>async…await</p>
+</blockquote>
+<p>这时候我们的代码使用<code>async....await...</code>的形式，这里我们还使用了<code>resolves</code>用于把现有对象转换成<code>Promise</code>对象，然后使用<code>Jest</code>中的<code>toMatchObject</code>进行匹配对象中的属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;FetchFourData 测试&quot;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">//resolves把现有对象转换成Promise对象，</span></span><br><span class="line">  <span class="comment">//toMatchObject 匹配对象中的属性</span></span><br><span class="line">  <span class="keyword">await</span> expect(fetchFourData()).resolves.toMatchObject(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">      success: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 简单一点的方法</span></span><br><span class="line">test(<span class="string">&quot;FetchFourData 测试&quot;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> fetchFourData();</span><br><span class="line">  expect(response.data).toEqual(&#123;</span><br><span class="line">    success: <span class="literal">true</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>jest 的四个钩子函数<blockquote>
+<p>beforeAll</p>
+</blockquote>
+</li>
+</ol>
+<p>在所有测试用例之前进行执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beforeAll(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;beforeAll Test&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 控制台会先输出&#x27;beforeAll Test&#x27;，再执行后面的用例</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>afterAll</p>
+</blockquote>
+<p>在完成所有测试用例之后才执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">afterAll(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;afterAll Test&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>beforeEach</p>
+</blockquote>
+<p>在每个测试用例前都会执行一次的钩子函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">beforeEach(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;beforeEach Test&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>afterEach</p>
+</blockquote>
+<p>在每次测试用例完成测试之后执行一次。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">afterEach(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;afterEach Test&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>测试用例分组</li>
+</ol>
+<p><code>Jest</code>为我们提供了一个分组的语法<code>describe()</code>,这个方法接受两个参数，可以把多个测试用例进行分开。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">&quot;大脚相关服务&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  test(<span class="string">&quot;测试 大脚足浴 方法&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    baojian.gongzhu(<span class="number">1</span>);</span><br><span class="line">    baojian.anjiao();</span><br><span class="line">    <span class="built_in">console</span>.log(baojian.fuwu);</span><br><span class="line">    expect(baojian.fuwu).toEqual(<span class="string">&quot;大脚走进房间为你_足疗&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  test(<span class="string">&quot;测试 大脚泰式保健  方法&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    baojian.gongzhu(<span class="number">1</span>);</span><br><span class="line">    baojian.taishi();</span><br><span class="line">    <span class="built_in">console</span>.log(baojian.fuwu);</span><br><span class="line">    expect(baojian.fuwu).toEqual(<span class="string">&quot;大脚走进房间为你_泰式保健&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>钩子函数的作用域</li>
+</ol>
+<ul>
+<li>钩子函数在父级分组可作用域子集，类似继承</li>
+<li>钩子函数同级分组作用域互不干扰，各起作用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">&quot;test1&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  beforeEach(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;beforeEach Test1&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">describe(<span class="string">&quot;test2&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  beforeEach(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;beforeEach Test2&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// beforeEach Test1</span></span><br><span class="line"><span class="comment">// beforeEach Test2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>先执行外部的钩子函数，再执行内部的钩子函数</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">SheriSzeto</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sheriszeto.github.io/2021/04/22/yuque/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">https://sheriszeto.github.io/2021/04/22/yuque/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sheriszeto.github.io" target="_blank">CC的部落格</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/26/yuque/%E5%B8%B8%E7%94%A8%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">常用数组排序</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/15/yuque/Ant%20Design%20UI%20%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%81%87%E5%88%B0%E7%9A%84/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Ant Design UI 组件库使用过程中的遇到的</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">SheriSzeto</div><div class="author-info__description">前端开发技术宅</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sheriszeto"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/sheriszeto" target="_blank" title="Github"><i class="iconfont icon-github-copy"></i></a><a class="social-icon" href="mailto:sheri_situ@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang-copy"></i></a><a class="social-icon" href="https://blog.csdn.net/Sheri_stx" target="_blank" title=""><i class="iconfont icon-csdn-copy"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎收看我的blog，有什么交流可以发邮件我哦💖💖💖</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">jest 前端测试框架</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付宝小程序--二手物品商城"/></a><div class="content"><a class="title" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城">支付宝小程序--二手物品商城</a><time datetime="2022-06-15T03:55:09.000Z" title="发表于 2022-06-15 11:55:09">2022-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker安装Jenkins"/></a><div class="content"><a class="title" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins">docker安装Jenkins</a><time datetime="2022-06-14T07:47:18.000Z" title="发表于 2022-06-14 15:47:18">2022-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite+ant design vue创建vue 3项目"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目">vite+ant design vue创建vue 3项目</a><time datetime="2022-05-18T06:49:52.000Z" title="发表于 2022-05-18 14:49:52">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac 升级node版本"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本">Mac 升级node版本</a><time datetime="2022-05-18T06:42:45.000Z" title="发表于 2022-05-18 14:42:45">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="javascript设计模式以及运用"/></a><div class="content"><a class="title" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用">javascript设计模式以及运用</a><time datetime="2022-03-21T02:09:03.000Z" title="发表于 2022-03-21 10:09:03">2022-03-21</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By SheriSzeto</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CC的部落格 - 2020 冲冲冲</title><meta name="keywords" content="学习"><meta name="author" content="SheriSzeto"><meta name="copyright" content="SheriSzeto"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="前端开发技术宅">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CC的部落格">
+<meta property="og:url" content="https://sheriszeto.github.io/page/2/index.html">
+<meta property="og:site_name" content="CC的部落格">
+<meta property="og:description" content="前端开发技术宅">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg">
+<meta property="article:author" content="SheriSzeto">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://sheriszeto.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SheriSzeto","link":"链接: ","source":"来源: CC的部落格","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-05 15:41:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2215283_t3ao8pxbrz.css"><meta name="generator" content="Hexo 5.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/index01.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CC的部落格</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">CC的部落格</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/sheriszeto" target="_blank" title="Github"><i class="iconfont icon-github-copy"></i></a><a class="social-icon" href="mailto:sheri_situ@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang-copy"></i></a><a class="social-icon" href="https://blog.csdn.net/Sheri_stx" target="_blank" title=""><i class="iconfont icon-csdn-copy"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/15/yuque/%E4%BD%BF%E7%94%A8fetch%E5%B0%81%E8%A3%85%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E6%96%B9%E6%B3%95/" title="使用fetch封装下载文件方法">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用fetch封装下载文件方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/15/yuque/%E4%BD%BF%E7%94%A8fetch%E5%B0%81%E8%A3%85%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E6%96%B9%E6%B3%95/" title="使用fetch封装下载文件方法">使用fetch封装下载文件方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.514Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990import fetch from &#x27;dva/fetch’;import &#123; stringify &#125; from &#x27;qs’;import &#123; message &#125; from &#x27;antd’;import &#123; getFormData &#125; from &#x27;./index’;/** * Requests a URL, returning a promise. * * @param  &#123;string&#125; url       The URL we want to request * @param  &#123;object&#125; [options] ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/15/yuque/react%20hooks/" title="react hooks">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="react hooks"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/15/yuque/react%20hooks/" title="react hooks">react hooks</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.514Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">背后是类组件和函数组件的认知区别函数组件会捕获 render 内部的状态，这是两类组件最大的不同。
+####
+1、useState12&#x2F;&#x2F; 基础用法const [state, setState] &#x3D; useState(initialState);
+
+
+注意：
+12345if(showSex)&#123;    const [ sex , setSex ] &#x3D; useState(&#39;男&#39;)    showSex&#x3D;false&#125;上面写法会报错，原因是：React Hooks不能出现在条件判断语句中，因为它必须有完全一样的渲染顺序。
+
+####
+2、useEffect 允许函数组件执行副作用操作useEffect代替生命周期
+123&#x2F;&#x2F; 基本用法&#x2F;&#x2F; @params callBack 回调函数 [] 依赖函数useEffect(callBack, [])
+
+#####
+每一次渲染都执行1useEffect(callBack)
+
+#####
+仅在挂载阶段执行一次1useEffect( ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/14/yuque/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="git常用命令">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="git常用命令">git常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.514Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">1、克隆库1git clone https://github.com/SheriSzeto/learnt.git
+
+2、创建并切换分支1git checkout -b dev
+
+3、创建分支1git branch dev
+
+4、切换分支1git checkout dev
+
+5、合并分支（合并远程库 master 分支）1git merge origin/master
+
+6、推送分支（推送远程库 master 分支）1git push origin master
+
+7、添加所有文件到暂存区1git add .
+
+8、添加和提交文件到本地12git add test.txtgit commit -m &#x27;add some&#x27;
+
+9、删除分支1git branch -d feature
+
+10、创建远程分支到本地分支（可追踪）1git checkout -b dev origin/dev
+
+11、取消暂存文件（已经执行 git add）1git reset HEAD README.md
+
+12、从远程库中拉取数据（只拉不合并到本地分支，需手动 merge）1git fetch ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/14/yuque/es6%20%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="es6 常用语法">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="es6 常用语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/es6%20%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="es6 常用语法">es6 常用语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.514Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">1.常量123const PI = &quot;3.1415926&quot;;//常量一旦创建，值将不可以改变，否则会报错PI = 3; //报错
+
+2.作用域12345678// es5作用域const callbacks = [];for (var i = 0; i &lt; 2; i++) &#123;  callbacks[i] = function () &#123;    return i * 2;  &#125;;&#125;console.table([callbacks[0](), callbacks[1]()]); //4 4
+
+这里的 for 循环中的 i 会被提前至外部，i 变量为全局变量
+123456789//es6的块级作用域，只在括号内有意义const callback = [];for (let j = 0; j &lt; 2; j++) &#123;  callback[j] = function () &#123;    return j * 2;  &#125;;&#125;console.table([callback[0](), callba ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/14/yuque/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" title="常用linux命令">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用linux命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" title="常用linux命令">常用linux命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.514Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">
+ls —查看当前目录下有哪些文件
+ls -l —查看当前目录下的文件详细信息，还有隐藏的文件
+ls -la —查看隐藏与不隐藏的文件
+cd  /xxx —转换路径
+pwd —查看当前所处路径
+rm xxx —删除某个文件
+cd .. —返回上级目录
+rm -r xxx  —删除文件夹，同时删除文件夹下的文件，递归删除
+pop —查看当前的进程,退出按 q
+ps aux —查看进程的详细信息
+ps aux | grep ssh —筛选查看所有 ssh 进程的列表
+ifconfig(ip add) —查看当前网络信息配置
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/14/yuque/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%ABCORS/" title="跨域资源共享CORS">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="跨域资源共享CORS"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%ABCORS/" title="跨域资源共享CORS">跨域资源共享CORS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.515Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">代理请求如果做到这一步，你应该非常欣喜。新技能 get! 但是这里有一个问题被回避了：跨域问题。
+请重新审视我们的请求：const endPointURI = ‘https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke&#39;;这里我们直接调用了一个「非本地」地址。在实际开发中是比较罕见的。这里能够成功，是因为被调用的 API 做了额外的人为设置，允许一个「非同域」的 ajax 请求。跨域资源共享 CORS 涉及的知识点比较多。我们这里做简单的介绍，目的是让你知道如何在本地开发服务器上增加代理请求的功能。
+我们在浏览器中看到的页面是从一个本地开发服务器所伺服的。这个本地开发服务器的地址就是 http://localhost:8000/ 。当我们调用 getRandomPuzzle 时，此时发送 ajax 请求页面的域就是 http://localhost:8000，但是请求的数据在另外一台服务器 https://08ad1pao69.execute-api.us-east-1.amazonaws.co ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/14/yuque/HTML5%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/" title="HTML5标准模板">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML5标准模板"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/HTML5%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/" title="HTML5标准模板">HTML5标准模板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.515Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">1、HTML5 标准模板12345678&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-CN&quot;&gt;  &lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot; /&gt;    &lt;title&gt;HTML5标准模版&lt;/title&gt;  &lt;/head&gt;  &lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+
+2、移动端模板1234567891011121314151617181920212223242526272829&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-CN&quot;&gt;  &lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot; /&gt;    &lt;meta      name=&quot;viewport&quot;      content=&quot;width=device-width, initial-scale=1. ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/14/yuque/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94/" title="移动端适配方案对比">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="移动端适配方案对比"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94/" title="移动端适配方案对比">移动端适配方案对比</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.515Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">目前出现的关于移动端适配的方案有：
+
+通过媒体查询的方式即 CSS3 的 meida queries
+以天猫首页为代表的 flex 弹性布局
+以淘宝首页为代表的 rem+viewport 缩放
+rem 方式
+
+Meida Queries通过查询设备的宽度来执行不同的  css  代码，最终达到界面的配置。
+123@media screen and (max-width: 600px) &#123; /*当屏幕尺寸小于600px时，应用下面的CSS样式*/  /*你的css代码*/&#125;
+
+优点
+media query可以做到设备像素比的判断，方法简单，成本低，特别是对移动和 PC 维护同一套代码的时候。目前像Bootstrap等框架使用这种方式布局
+图片便于修改，只需修改 css 文件
+调整屏幕宽度的时候不用刷新页面即可响应式展示
+
+缺点
+代码量比较大，维护不方便
+为了兼顾大屏幕或高清设备，会造成其他设备资源浪费，特别是加载图片资源
+为了兼顾移动端和 PC 端各自响应式的展示效果，难免会损失各自特有的交互方式
+
+Flex 弹性布局以天猫的实现方式进行说明：它的viewport是固 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="前端开发命名规范">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端开发命名规范"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="前端开发命名规范">前端开发命名规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.515Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">一、文件规范1、文件归档至约定的目录中
+例如：css 分为两大类，通用类和业务类
+
+基本样式库 /css/core通用 ui 元素样式库 /css/libjs 组件相关样式库 /css/ui
+二、注释规范1、文件顶部注释（推荐使用）1/* * @description: 中文说明 * @author: name * @update: name (2013-04-13 18:32) */
+
+2、模块注释1/* module: module1 by 张三 */ … /* module: module2 by 张三 */
+
+3、单行注释与多行注释1/* this is a short comment */
+
+单行注释可以写在单独一行，也可以写在行尾，注释中的每一行长度不超过 40 个汉字，或者 80 个英文字符。
+1234/* * this is comment line 1. * this is comment line 2. */
+
+多行注释必须写在单独行内
+4、特殊注释12/* TODO: xxxx by name 2013-04-13 18:32 *//* BUGFIX: xxxx  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E6%89%AB%E7%9B%B2%E4%B9%8B%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" title="前端扫盲之打造一个自动化的前端项目">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端扫盲之打造一个自动化的前端项目"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E6%89%AB%E7%9B%B2%E4%B9%8B%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" title="前端扫盲之打造一个自动化的前端项目">前端扫盲之打造一个自动化的前端项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-08-05T07:13:16.516Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="content">1、创建项目不管做什么开发，我们都应该遵循一定的规范，创建项目同样要注意文件夹的名字和结构。首先创建一个如下的基础项目结构，暂且就将项目命名为 auto-web：简单解释一下：/src 源文件所在地。开发过程中的各种 CSS 和 JS 源文件都往这里面放。/dist 目标文件所在地。上线前通过工具生成的 CSS 和 JS 目标文件都输出到这里。/images 图片文件。/vendor 第三方的 CSS、JS 和字体文件都存放到这里。/viewsHTML 视图文件。当然目前我们是手动创建的，可以设想一下，利用 NodeJS，我们是完全可以做到一条命令创建出这样的文件夹结构。
+2、从 index.html 开始首先我们习惯性地创建一个 index.html 页面
+    Hello world   这是我的个人主页  
+
+3、我想用 Jade什么是 Jade ? -Jade是 Node 的一个模板引擎，一句话就是让我们能够更快更简便地写 HTML，大家可以去 Jade 的官网，由于其主要是靠缩进来定义结构，所以一般都能够很快地学会这种写法。类似的模板引擎在 Rails 里面也有一个叫 Sl ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">SheriSzeto</div><div class="author-info__description">前端开发技术宅</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sheriszeto"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/sheriszeto" target="_blank" title="Github"><i class="iconfont icon-github-copy"></i></a><a class="social-icon" href="mailto:sheri_situ@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang-copy"></i></a><a class="social-icon" href="https://blog.csdn.net/Sheri_stx" target="_blank" title=""><i class="iconfont icon-csdn-copy"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎收看我的blog，有什么交流可以发邮件我哦💖💖💖</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付宝小程序--二手物品商城"/></a><div class="content"><a class="title" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城">支付宝小程序--二手物品商城</a><time datetime="2022-06-15T03:55:09.000Z" title="发表于 2022-06-15 11:55:09">2022-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker安装Jenkins"/></a><div class="content"><a class="title" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins">docker安装Jenkins</a><time datetime="2022-06-14T07:47:18.000Z" title="发表于 2022-06-14 15:47:18">2022-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite+ant design vue创建vue 3项目"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目">vite+ant design vue创建vue 3项目</a><time datetime="2022-05-18T06:49:52.000Z" title="发表于 2022-05-18 14:49:52">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac 升级node版本"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本">Mac 升级node版本</a><time datetime="2022-05-18T06:42:45.000Z" title="发表于 2022-05-18 14:42:45">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="javascript设计模式以及运用"/></a><div class="content"><a class="title" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用">javascript设计模式以及运用</a><time datetime="2022-03-21T02:09:03.000Z" title="发表于 2022-03-21 10:09:03">2022-03-21</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/javascript/"><span class="card-category-list-name">javascript</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/react/"><span class="card-category-list-name">react</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/hexo/" style="font-size: 1.5em; color: rgb(52, 198, 18)">hexo</a><a href="/tags/question/" style="font-size: 1.1em; color: rgb(151, 61, 127)">question</a><a href="/tags/react/" style="font-size: 1.1em; color: rgb(53, 53, 152)">react</a><a href="/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 1.1em; color: rgb(161, 110, 160)">生命周期</a><a href="/tags/javascript/" style="font-size: 1.1em; color: rgb(91, 49, 159)">javascript</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: rgb(144, 104, 167)">设计模式</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/03/"><span class="card-archive-list-date">三月 2019</span><span class="card-archive-list-count">2</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-08-05T07:41:03.654Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/index01.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By SheriSzeto</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "一分耕耘，一分收获，加油干".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '一分耕耘，一分收获，加油干'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

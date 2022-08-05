@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端开发命名规范 | CC的部落格</title><meta name="keywords" content="学习"><meta name="author" content="SheriSzeto"><meta name="copyright" content="SheriSzeto"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一、文件规范1、文件归档至约定的目录中 例如：css 分为两大类，通用类和业务类  基本样式库 &#x2F;css&#x2F;core通用 ui 元素样式库 &#x2F;css&#x2F;libjs 组件相关样式库 &#x2F;css&#x2F;ui 二、注释规范1、文件顶部注释（推荐使用）1&#x2F;* * @description: 中文说明 * @author: name * @update: name (2013-04-13 18:32) *&#x2F;  2、模块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发命名规范">
+<meta property="og:url" content="https://sheriszeto.github.io/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/index.html">
+<meta property="og:site_name" content="CC的部落格">
+<meta property="og:description" content="一、文件规范1、文件归档至约定的目录中 例如：css 分为两大类，通用类和业务类  基本样式库 &#x2F;css&#x2F;core通用 ui 元素样式库 &#x2F;css&#x2F;libjs 组件相关样式库 &#x2F;css&#x2F;ui 二、注释规范1、文件顶部注释（推荐使用）1&#x2F;* * @description: 中文说明 * @author: name * @update: name (2013-04-13 18:32) *&#x2F;  2、模块">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-04-14T03:05:52.000Z">
+<meta property="article:modified_time" content="2022-08-05T07:13:16.515Z">
+<meta property="article:author" content="SheriSzeto">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://sheriszeto.github.io/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: SheriSzeto","link":"链接: ","source":"来源: CC的部落格","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-05 15:13:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2215283_t3ao8pxbrz.css"><meta name="generator" content="Hexo 5.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CC的部落格</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">前端开发命名规范</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-14T03:05:52.000Z" title="发表于 2021-04-14 11:05:52">2021-04-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-05T07:13:16.515Z" title="更新于 2022-08-05 15:13:16">2022-08-05</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1><span id="一-文件规范">一、文件规范</span></h1><h2><span id="1-文件归档至约定的目录中">1、文件归档至约定的目录中</span></h2><blockquote>
+<p>例如：css 分为两大类，通用类和业务类</p>
+</blockquote>
+<p>基本样式库 /css/core<br>通用 ui 元素样式库 /css/lib<br>js 组件相关样式库 /css/ui</p>
+<h1><span id="二-注释规范">二、注释规范</span></h1><h2><span id="1-文件顶部注释推荐使用">1、文件顶部注释（推荐使用）</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* * @description: 中文说明 * @author: name * @update: name (2013-04-13 18:32) */</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-模块注释">2、模块注释</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* module: module1 by 张三 */</span> … <span class="comment">/* module: module2 by 张三 */</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="3-单行注释与多行注释">3、单行注释与多行注释</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* this is a short comment */</span></span><br></pre></td></tr></table></figure>
+
+<p>单行注释可以写在单独一行，也可以写在行尾，注释中的每一行长度不超过 40 个汉字，或者 80 个英文字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * this is comment line 1.</span></span><br><span class="line"><span class="comment"> * this is comment line 2.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p>多行注释必须写在单独行内</p>
+<h2><span id="4-特殊注释">4、特殊注释</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* <span class="doctag">TODO:</span> xxxx by name 2013-04-13 18:32 */</span></span><br><span class="line"><span class="comment">/* BUGFIX: xxxx by name 2012-04-13 18:32 */</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="5-区块注释">5、区块注释</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Header */</span> <span class="comment">/* Footer */</span> <span class="comment">/* Gallery */</span></span><br></pre></td></tr></table></figure>
+
+<p>对一个代码区块注释（可选），将样式语句分区块并在新行中对其注释。</p>
+<h1><span id="三-命名规范">三、命名规范</span></h1><blockquote>
+<p>使用有意义的或通用的 ID 和 class 命名：ID 和 class 的命名应反映该元素的功能或使用通用名称，而不要用抽象的晦涩的命名。反映元素的使用目的是首选；使用通用名称代表该元素不表特定意义，与其同级元素无异，通常是用于辅助命名；使用功能性或通用的名称可以更适用于文档或模版变化的情况。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 不推荐: 无意义 */</span> #yee-<span class="number">1901</span> &#123;&#125;</span><br><span class="line"><span class="comment">/* 不推荐: 与样式相关 */</span> .button-green &#123;&#125;.clear &#123;&#125;</span><br><span class="line"><span class="comment">/* 推荐: 特殊性 */</span> #gallery &#123;&#125;#login &#123;&#125;.video &#123;&#125;</span><br><span class="line"><span class="comment">/* 推荐: 通用性 */</span> .aux &#123;&#125;.alt &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>常用命名（多记多查英文单词）：page、wrap、layout、header(head)、footer(foot、ft)、content(cont)、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips 等</p>
+</blockquote>
+<p>ID 和 class 命名越简短越好，只要足够表达涵义。这样既有助于理解，也能提高代码效率。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 不推荐 */</span> #navigation &#123;&#125;.atr &#123;&#125;</span><br><span class="line"><span class="comment">/* 推荐 */</span> #nav &#123;&#125;.author &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>类型选择器避免同时使用标签、ID 和 class 作为定位一个元素选择器；从性能上考虑也应尽量减少选择器的层级。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 不推荐 */</span>ul#example &#123;&#125;div.error &#123;&#125;</span><br><span class="line"><span class="comment">/* 推荐 */</span>#example &#123;&#125;.error &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>命名时需要注意的点：<br>规则命名中，一律采用小写加中划线的方式，不允许使用大写字母或 _<br>命名避免使用中文拼音，应该采用更简明有语义的英文单词进行组合<br>命名注意缩写，但是不能盲目缩写，具体请参见常用的 CSS 命名规则<br>不允许通过 1、2、3 等序号进行命名<br>避免 class 与 id 重名<br>id 用于标识模块或页面的某一个父容器区域，名称必须唯一，不要随意新建 id<br>class 用于标识某一个类型的对象，命名必须言简意赅。<br>尽可能提高代码模块的复用，样式尽量用组合的方式<br>规则名称中不应该包含颜色（red/blue）、定位（left/right）等与具体显示效果相关的信息。应该用意义命名，而不是样式显示结果命名</p>
+</blockquote>
+<p>class 类样式命名遵守 BEM 方式：</p>
+<blockquote>
+<p>.page-header<strong>main<br>.dialog</strong>content<br>.gallery-list–wrap<br>.thumbnail-image–info<br>.action__btn-group</p>
+</blockquote>
+<h2><span id="1-命名风格">1、命名风格</span></h2><h3><span id="a强制在代码中严禁使用拼音与中英文混合的方式更不允许直接使用中文的方式">a.【强制】<strong>在代码中严禁使用拼音与中英文混合的方式，更不允许直接使用中文的方式</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line">taobao;</span><br><span class="line">tmall;</span><br><span class="line">shanghai;</span><br><span class="line">coupons;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反例</span></span><br><span class="line">yhq[优惠券];</span><br></pre></td></tr></table></figure>
+
+<h3><span id="b强制类名使用大写驼峰命名法来表示typescript-中枚举值使用大写驼峰命名法表示">b.【强制】<strong>类名使用大写驼峰命名法来表示，Typescript 中枚举值使用大写驼峰命名法表示</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;&#125;</span><br><span class="line">enum Color &#123;Red = <span class="number">1</span>, Green, Blue&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">user</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="c强制常量名全部大写单词间使用下划线隔开">c.【强制】<strong>常量名全部大写，单词间使用下划线隔开</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正例</span></span><br><span class="line">GOOGLE_MAP_TOKEN;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反例</span></span><br><span class="line">TOKEN;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="d建议在-typescript-中类型使用-type-作后缀接口使用-i-作为前缀">d.【建议】<strong>在 TypeScript 中，类型使用 Type 作后缀，接口使用 I 作为前缀</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type PropsType = &#123;&#125;;</span><br><span class="line">interface ILoginProps &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="e建议在-vue-和-angular-中模板语法中所有组件名使用中线命名法在-react-中使用大写驼峰命名法来表示">e.【建议】<strong>在 Vue 和 Angular 中，模板语法中所有组件名使用中线命名法，在 React 中使用大写驼峰命名法来表示</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Vue</span></span><br><span class="line">&lt;el-button type=<span class="string">&quot;text&quot;</span> @click=<span class="string">&quot;toDetail&quot;</span>&gt;详情&lt;/el-button&gt;</span><br><span class="line">&lt;custom-component a-prop=<span class="string">&quot;prop&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Angular</span></span><br><span class="line">&lt;nz-sider [nzWidth]=<span class="string">&quot;200&quot;</span> style=<span class="string">&quot;background:#fff&quot;</span>&gt;&lt;/nz-sider&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// React</span></span><br><span class="line">&lt;SelectPicture data=&#123;<span class="built_in">this</span>.images&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="f推荐统一使用中线命名法来命名目录">f.【推荐】<strong>统一使用中线命名法来命名目录</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|-- page-header</span><br><span class="line">|   |-- PageHeader.vue</span><br></pre></td></tr></table></figure>
+
+<h3><span id="g强制在服务名上使用-service-后缀">g.<strong>【强制】在服务名上使用 Service 后缀</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="h建议组件文件名采用大写驼峰命名方式">h.【建议】<strong>组件文件名采用大写驼峰命名方式</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Vue</span></span><br><span class="line">User.vue;</span><br><span class="line"></span><br><span class="line"><span class="comment">// React</span></span><br><span class="line">User.jsx;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="i建议在-react-中使用目录名称作为组件名在目录内容直接使用index作为入口在-vue-中使用目录名作为组件及页面名">i.【建议】<strong>在 React 中使用目录名称作为组件名，在目录内容直接使用<em>index</em>作为入口，在 Vue 中使用目录名作为组件及页面名</strong></span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Vue</span></span><br><span class="line">|-- user-info</span><br><span class="line">|  |-- UserInfo.vue</span><br><span class="line"></span><br><span class="line"><span class="comment">// React</span></span><br><span class="line">|-- user-info</span><br><span class="line">|   |-- index.jsx</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-函数及-js-数据类型命名">2、函数及 js 数据类型命名</span></h2><h3><span id="a表示可见性-进行中的状态">a.表示可见性、进行中的状态</span></h3><p><strong>解释</strong>：<strong>可见性</strong>在通常指页面中的元素、组件是否显示（或者组件挂载到 DOM 上，但并不可见）。<strong>进行中</strong>主要是说明某种状态是处于持续进行中。<br>推荐命名方式为 is + 动词（现在进行时）/形容词</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  isShow: <span class="string">&#x27;是否显示&#x27;</span>,</span><br><span class="line">  isVisible: <span class="string">&#x27;是否可见&#x27;</span>,</span><br><span class="line">  isLoading: <span class="string">&#x27;是否处于加载中&#x27;</span>,</span><br><span class="line">  isConnecting: <span class="string">&#x27;是否处于连接中&#x27;</span>,</span><br><span class="line">  isValidating: <span class="string">&#x27;正在验证中&#x27;</span>,</span><br><span class="line">  isRunning: <span class="string">&#x27;正在运行中&#x27;</span>,</span><br><span class="line">  isListening: <span class="string">&#x27;正在监听中&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="b属性状态类">b.属性状态类</span></h3><p><strong>解释</strong>：通常用来描述实体（例如：HTML 标签、组件、对象）的功能属性，而且定法比较固定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  disabled: <span class="string">&#x27;是否禁用&#x27;</span>,</span><br><span class="line">  editable: <span class="string">&#x27;是否可编辑&#x27;</span>,</span><br><span class="line">  clearable: <span class="string">&#x27;是否可清除&#x27;</span>,</span><br><span class="line">  readonly: <span class="string">&#x27;只读&#x27;</span>,</span><br><span class="line">  expandable: <span class="string">&#x27;是否可展开&#x27;</span>,</span><br><span class="line">  checked: <span class="string">&#x27;是否选中&#x27;</span>,</span><br><span class="line">  enumberable: <span class="string">&#x27;是否可枚举&#x27;</span>,</span><br><span class="line">  iterable: <span class="string">&#x27;是否可迭代&#x27;</span>,</span><br><span class="line">  clickable: <span class="string">&#x27;是否可点击&#x27;</span>,</span><br><span class="line">  draggable: <span class="string">&#x27;是否可拖拽&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="c配置类-选项类">c.配置类、选项类</span></h3><p><strong>解释</strong>：主要是指组件功能的开启与关闭，功能属性的配置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  withTab: <span class="string">&#x27;是否带选项卡&#x27;</span>,</span><br><span class="line">  withoutTab: <span class="string">&#x27;不带选项卡&#x27;</span>,</span><br><span class="line">  enableFilter: <span class="string">&#x27;开启过滤&#x27;</span>,</span><br><span class="line">  allownCustomScale: <span class="string">&#x27;允许自定义缩放&#x27;</span>,</span><br><span class="line">  shouldClear: <span class="string">&#x27;是否清除&#x27;</span>,</span><br><span class="line">  canSelectItem: <span class="string">&#x27;是否能选中元素&#x27;</span>,</span><br><span class="line">  noColon: <span class="string">&#x27;不显示label后面的冒号&#x27;</span>,</span><br><span class="line">  checkJs: <span class="string">&#x27;检查Js&#x27;</span>,</span><br><span class="line">  emitBOM: <span class="string">&#x27;Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="d事件处理">d.事件处理</span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  onSubmit: <span class="string">&#x27;提交表单&#x27;</span>,</span><br><span class="line">  handleSizeChange: <span class="string">&#x27;处理分页页数改变&#x27;</span>,</span><br><span class="line">  handlePageChange: <span class="string">&#x27;处理分页每页大小改变&#x27;</span>,</span><br><span class="line">  onKeydown: <span class="string">&#x27;按下键&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="e异步处理">e.异步处理</span></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  getUsers: <span class="string">&#x27;获取用户列表&#x27;</span>,</span><br><span class="line">  fetchToken: <span class="string">&#x27;取得Token&#x27;</span>,</span><br><span class="line">  deleteUser: <span class="string">&#x27;删除用户&#x27;</span>,</span><br><span class="line">  removeTag: <span class="string">&#x27;移除标签&#x27;</span>,</span><br><span class="line">  updateUsrInfo: <span class="string">&#x27;更新用户信息&#x27;</span>,</span><br><span class="line">  addUsr: <span class="string">&#x27;添加用户&#x27;</span>,</span><br><span class="line">  createAccount: <span class="string">&#x27;创建账户&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>命名主要围绕数据的增删查找来划分，获取数据通常是 getXx 和 fetchXx，在作者看来两者在使用上的区分在于 getXx 的数据来源不一定直接取自异步的原始数据，可能是加工处理后的，而 fetchXx 是直接拿的原始数据。当然在实际项目中并没有区分，看个人喜好。<br>deleteXx 主要用于数据删除，而 removeXx 在语义上是移除数据，通常情况数据是还存在的，只是没有显示或数据假删除。updateXx 是指数据更新操作，addXx 是在已有列表数据中添加新的子项、而 createXx 主要是创建新的实例，比如新建一个账户。</p>
+<h3><span id="g数据的加工">g.数据的加工</span></h3><h4><span id="情形一根据特定属性获取属性">情形一：根据特定属性获取属性</span></h4><p>这里可以参考 DOM 方法的命名，比如：getElememtById()、getElementsByTagName()、getElementsByClassName() 和 getElementsByName()，然后提炼出一个比较实用的模板：getXxByYy()。其中 Xx 可以是：element, item, option, data, selection, list, options 以及一些特定上下文的名字，比如：user(s), menu(s) 等。Yy 相对来说比较固定，经常用到的就是 id, index, key, value, selected, actived 等。<br>除了使用 get，还可以使用 query 和 fetch，但是需要注意和上面提到的异步数据处理作一个区分。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  getItemById: <span class="string">&#x27;根据ID获取数据元素&#x27;</span>,</span><br><span class="line">  getItemsBySelected: <span class="string">&#x27;根据传入的已选列表ID来获取列表全部数据&#x27;</span>,</span><br><span class="line">  queryUserByUid: <span class="string">&#x27;根据UID查询用户&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="情形二格式化数据">情形二：格式化数据</span></h4><p>这里的格式化操作包括排序、调整数据结构、过滤数据、添加属性。命名通常使用 formatXx, convertXx, inverseXx, toggleXx, parseXx, flatXx, 也可以结合数组的一些操作方法来命名，比如 sliceXx, substrXx, spliceXx, sortXx, joinXx 等来命名。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  formatDate: <span class="string">&#x27;格式化日期&#x27;</span>,</span><br><span class="line">  convertCurrency: <span class="string">&#x27;转换货币单位&#x27;</span>,</span><br><span class="line">  inverseList: <span class="string">&#x27;反转数据列表&#x27;</span>,</span><br><span class="line">  toggleAllSelected: <span class="string">&#x27;切换所有已选择数据状态&#x27;</span>,</span><br><span class="line">  parseXml: <span class="string">&#x27;解析XML数据&#x27;</span>,</span><br><span class="line">  flatSelect: <span class="string">&#x27;展开选择数据&#x27;</span>,</span><br><span class="line">  sortByDesc: <span class="string">&#x27;按降序排序&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1><span id="四-常用英文词汇">四、常用英文词汇</span></h1><h2><span id="1-代码常用词汇">1、代码常用词汇</span></h2><p>动词<div style="background: #E8F7FF;padding:10px;border: 1px solid #ABD2DA;border-radius:5px;margin-bottom:5px;">on: 监听、正在进行中<br>get: 取<br>set: 设置<br>fetch: 获取<br>find: 查找<br>add: 添加<br>create: 创建<br>remove: 移除<br>delete: 删除<br>update: 更新<br>upgrade: 升级<br>downgrade: 使降级<br>sync: 同步<br>toggle: 切换<br>pull: 拉<br>push: 推<br>show: 显示<br>hide: 隐藏<br>resolve: 解析；分解<br>parse: 解析<br>lock: 锁定<br>link: 连接<br>merge: 合并<br>close: 关闭<br>clone: 克隆<br>clear: 清除<br>format: 格式化<br>convert: 转变<br>cancel: 取消<br>accept: 承认；同意<br>check: 检查，核对<br>concat: 合并数组、字符串<br>join: 合并<br>split: 分开<br>spread: 展开<br>search: 搜索<br>sort: 排序<br>assign: 分配，指定<br>handle: 处理<br>trigger: 触发<br>login: 登入<br>logout: 登出<br>register: 注册<br>sign: 签名<br>throw: 抛出<br>load: 加载<br>preload: 加载<br>copy: 复制<br>paste: 粘贴<br>connect: 连接<br>change: 改变<br>select: 选择<br>validate: 验证<br>submit: 表单提交<br>commit: 提交<br>match: 匹配<br>scroll: 滚动<br>write: 写<br>read: 读<br>enable: 启用<br>disable: 禁用<br>limit: 限制<br>bootstrap: 启动<br>init: 初始化<br>install: 加载<br>upload: 上传<br>inject: 注入<br>provide: 提供<br>exit: 退出<br>access: 访问<br>flush: 刷新/使暴露<br>refresh: 刷新<br>release: 发布<br>preview: 预览；试映<br>publish: 出版；发行<br>navigate: 导航；浏览<br>redirect: 重定向<br>back: 返回<br>switch: 切换<br>launch: 加载<br>browse/visit: 浏览<br>append: 追加<br>insert: 插入<br>swap: 交换<br>map: 遍历<br>extract: 提取；选取<br>provide: 提供<br>inject: 注入<br>observe: 观察<br>render: 渲染<br>debug: 调试<br>align: 对齐<br>popup: 弹出<br>transfer: 转让、迁移<br>attach: 附加<br>build: 构建<br>diagnose: 诊断，断定<br>ignore: 忽略<br>deploy: 部署；展开<br>send/sent: 送；寄出<br>defer: 推迟<br>delegate: 委托<br>destroy: 销毁<br>dispatch: 派发；分派<br>trace: 追踪</div><br>名词<div style="background: #E8F7FF;padding:10px;border: 1px solid #ABD2DA;border-radius:5px;margin-bottom:5px;">avatar: 头像<br>brand: 品牌<br>record: 记录<br>issue: 问题<br>project: 项目<br>repo(repository): 仓库；知识库<br>ecosystem: 生态系统<br>assets: 资产<br>resource: 资源<br>toolkit: 工具包、工具箱<br>workbench: 工作台<br>item: 项目；条款<br>option: 选项<br>field: 字段<br>type: 类型<br>status: 状态<br>property: 属性<br>attribute: 特性<br>parameter/argument: 参数<br>length: 长度<br>size: 尺寸<br>shape: 形状<br>label: 标签<br>value: 值<br>view: 视图<br>page: 页面<br>env(envirnment): 环境<br>context: 上下文<br>count: 总数；计数<br>amount: 数量；数额<br>sum: 合计；金额<br>num(number): 号码<br>total: 总数<br>money: 钱；货币<br>filter: 过滤器<br>pipe: 管道<br>stream: 流<br>buffer: 缓冲器<br>comment: 评论<br>ref(reference): 引用<br>res(response): 响应<br>req(request): 请求<br>entity: 实体<br>event: 事件<br>setup 设置<br>prefix 前缀<br>suffix 后缀<br>wizard 小部件<br>model 模型<br>flag 标志<br>factory 工厂<br>service 服务<br>constant: 常量<br>var(iable): 变量<br>collection: 集合<br>array: 数组<br>raw: 原始值<br>platform 平台<br>capital: 大写字母<br>uppercase/lowercase: 大/小写<br>letter: 字母<br>entrance: 入口<br>path: 路径<br>route: 路由<br>router: 路由器<br>config: 配置<br>middleware: 中间件<br>success: 成功<br>error: 错误<br>fail(ure): 失败<br>frontend: 前端<br>backend: 后端<br>local: 本地<br>sever: 服务器<br>production: 线上；产品<br>border: 边框<br>outline: 轮廓<br>precision: 精度<br>separator: 分隔符<br>mask: 遮罩<br>metadata: 元数据<br>location: 位置<br>sandbox: 沙箱<br>scope: 作用域<br>queue: 队列<br>heap: 堆<br>notice: 通知<br>bubble: 气泡<br>hooks: 钩子<br>cell: 单元格<br>row: 行<br>column: 列<br>group: 组<br>cursor: 游标<br>pattern: 模式<br>abstract: 抽象<br>compose: 复合；并集<br>callback: 回调函数<br>priority: 优先级<br>grade/rank/hierarchy 等级、层级<br>table,chart, graph, diagram: 表格，图表，曲线图，图表<br>system: 系统、体系<br>guards: 保障、守卫<br>segment/fragment: 片段、碎片<br>shaking: 抖动<br>mix: 混淆<br>dependence: 依赖<br>injection: 注入<br>markup: 标记<br>email: 电子邮件<br>version: 版本<br>detail: 详情<br>stub: 存根<br>score: 成绩<br>breakpoint: 断点<br>record: 记录<br>pointer: 指针<br>thumbnail: 缩略图<br>gallery: 画廊<br>viewport: 视口<br>strategy: 策略<br>outlet: 出口<br>inlet: 入口<br>gist: 主旨；要点；依据<br>licence: 许可证<br>copyright: 版权<br>order: 命令<br>input: 输入<br>output: 输出<br>effect: 影响；效果；作用<br>position: 位置<br>corner: 角落<br>animation: 动画<br>dot: 点<br>palette: 调色板；颜料<br>album: 相册<br>photo: 照片<br>host: 主机<br>session: 会话<br>cookie: 饼干；小甜点<br>domain: 域名<br>certificates: 证书<br>coercion: 强制<br>payload: 载物<br>thread: 线程<br>process: 进程<br>timestamp: 时间缀<br>conflicts: 冲突<br>terminal: 终端<br>portrait: 肖像<br>auxiliary: 附属物<br>backup: 备份<br>bitmap: 位图<br>breakpoint: 断点<br>concurrency: 并发<br>lock: 锁<br>digest: 摘要<br>exception: 异常<br>genericity: 泛型<br>handle: 句柄<br>macro: 宏<br>manifest: 清单<br>modifier: 修饰字；修饰符<br>override: 覆写<br>overload: 重载<br>procedure: 过程<br>protocol: 协议<br>recursion: 递归<br>marquee: 跑马灯</div><br>形容词<div style="background: #E8F7FF;padding:10px;border: 1px solid #ABD2DA;border-radius:5px;margin-bottom:5px;">native: 原生的<br>hybrid: 混合的<br>basic: 基础的<br>complex: 复杂的<br>empty: 空的<br>online: 在线的<br>offline: 离线的<br>public: 公共的<br>private: 私有的<br>static: 静态的<br>dynamic: 动态的<br>shared: 共享的<br>safe: 安全的<br>relative: 相对的<br>absolute: 绝对的<br>original: 原始的<br>infinite: 无限的<br>partial: 局部的<br>ascending: 按升序<br>descending: 按降序<br>primary: 原始的，第一的<br>secondary: 第二的<br>tertiary: 第三的<br>deprecated: 弃用的<br>concrete: 具体的<br>abstract: 抽象的<br>explicit: 显示的；明确的<br>implicit: 含蓄的；暗示的<br>mutable: 可变的</div></p>
+<h2><span id="2-业务常用词汇">2、业务常用词汇</span></h2><blockquote>
+</blockquote>
+<h1><span id="电商">电商</span></h1><blockquote>
+<p>coupons: 优惠券<br>couponsCode: 优惠码<br>discount: 折扣<br>points: 积分<br>memeber: 会员<br>vip: 会员<br>membership: 会员<br>delivery: 运费<br>domain: 域名<br>dashboard: 仪表盘<br>store: 门店<br>shop: 店铺<br>product: 产品<br>goods: 商品<br>order: 订单<br>setting: 设置<br>manager: 管理<br>channel: 渠道<br>notFound: 404 页面<br>feedback: 反馈<br>scratch: 刮刮卡<br>client: 客户端<br>market: 市场<br>promotion: 促销<br>popularize: 推广<br>tool: 工具<br>banner: 广告<br>friendlink：友情链接<br>partner： 合作伙伴<br>vote: 投票</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">SheriSzeto</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sheriszeto.github.io/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">https://sheriszeto.github.io/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://sheriszeto.github.io" target="_blank">CC的部落格</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/14/yuque/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">移动端适配方案对比</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/14/yuque/%E5%89%8D%E7%AB%AF%E6%89%AB%E7%9B%B2%E4%B9%8B%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">前端扫盲之打造一个自动化的前端项目</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh//SheriSzeto/image@main/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">SheriSzeto</div><div class="author-info__description">前端开发技术宅</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sheriszeto"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/sheriszeto" target="_blank" title="Github"><i class="iconfont icon-github-copy"></i></a><a class="social-icon" href="mailto:sheri_situ@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang-copy"></i></a><a class="social-icon" href="https://blog.csdn.net/Sheri_stx" target="_blank" title=""><i class="iconfont icon-csdn-copy"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎收看我的blog，有什么交流可以发邮件我哦💖💖💖</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">一、文件规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">1、文件归档至约定的目录中</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">二、注释规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.1.</span> <span class="toc-text">1、文件顶部注释（推荐使用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.2.</span> <span class="toc-text">2、模块注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.3.</span> <span class="toc-text">3、单行注释与多行注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.4.</span> <span class="toc-text">4、特殊注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.5.</span> <span class="toc-text">5、区块注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">三、命名规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">3.1.</span> <span class="toc-text">1、命名风格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.1.</span> <span class="toc-text">a.【强制】在代码中严禁使用拼音与中英文混合的方式，更不允许直接使用中文的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.2.</span> <span class="toc-text">b.【强制】类名使用大写驼峰命名法来表示，Typescript 中枚举值使用大写驼峰命名法表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.3.</span> <span class="toc-text">c.【强制】常量名全部大写，单词间使用下划线隔开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.4.</span> <span class="toc-text">d.【建议】在 TypeScript 中，类型使用 Type 作后缀，接口使用 I 作为前缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.5.</span> <span class="toc-text">e.【建议】在 Vue 和 Angular 中，模板语法中所有组件名使用中线命名法，在 React 中使用大写驼峰命名法来表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.6.</span> <span class="toc-text">f.【推荐】统一使用中线命名法来命名目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.7.</span> <span class="toc-text">g.【强制】在服务名上使用 Service 后缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.8.</span> <span class="toc-text">h.【建议】组件文件名采用大写驼峰命名方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.1.9.</span> <span class="toc-text">i.【建议】在 React 中使用目录名称作为组件名，在目录内容直接使用index作为入口，在 Vue 中使用目录名作为组件及页面名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">3.2.</span> <span class="toc-text">2、函数及 js 数据类型命名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.1.</span> <span class="toc-text">a.表示可见性、进行中的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.2.</span> <span class="toc-text">b.属性状态类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.3.</span> <span class="toc-text">c.配置类、选项类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.4.</span> <span class="toc-text">d.事件处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.5.</span> <span class="toc-text">e.异步处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.2.6.</span> <span class="toc-text">g.数据的加工</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">3.2.6.1.</span> <span class="toc-text">情形一：根据特定属性获取属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">3.2.6.2.</span> <span class="toc-text">情形二：格式化数据</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">四、常用英文词汇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.1.</span> <span class="toc-text">1、代码常用词汇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.2.</span> <span class="toc-text">2、业务常用词汇</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">电商</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付宝小程序--二手物品商城"/></a><div class="content"><a class="title" href="/2022/06/15/yuque/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%B0%8F%E7%A8%8B%E5%BA%8F--%E4%BA%8C%E6%89%8B%E7%89%A9%E5%93%81%E5%95%86%E5%9F%8E/" title="支付宝小程序--二手物品商城">支付宝小程序--二手物品商城</a><time datetime="2022-06-15T03:55:09.000Z" title="发表于 2022-06-15 11:55:09">2022-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker安装Jenkins"/></a><div class="content"><a class="title" href="/2022/06/14/yuque/docker%E5%AE%89%E8%A3%85Jenkins/" title="docker安装Jenkins">docker安装Jenkins</a><time datetime="2022-06-14T07:47:18.000Z" title="发表于 2022-06-14 15:47:18">2022-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite+ant design vue创建vue 3项目"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/vite+ant%20design%20vue%E5%88%9B%E5%BB%BAvue%203%E9%A1%B9%E7%9B%AE/" title="vite+ant design vue创建vue 3项目">vite+ant design vue创建vue 3项目</a><time datetime="2022-05-18T06:49:52.000Z" title="发表于 2022-05-18 14:49:52">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac 升级node版本"/></a><div class="content"><a class="title" href="/2022/05/18/yuque/Mac%20%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC/" title="Mac 升级node版本">Mac 升级node版本</a><time datetime="2022-05-18T06:42:45.000Z" title="发表于 2022-05-18 14:42:45">2022-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用"><img data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="javascript设计模式以及运用"/></a><div class="content"><a class="title" href="/2022/03/21/yuque/javascript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%94%A8/" title="javascript设计模式以及运用">javascript设计模式以及运用</a><time datetime="2022-03-21T02:09:03.000Z" title="发表于 2022-03-21 10:09:03">2022-03-21</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By SheriSzeto</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
